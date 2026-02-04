@@ -59,7 +59,7 @@ export default function Journey() {
       <Navbar />
       
       {/* Header */}
-      <div className="bg-gradient-to-b from-primary/10 to-background pt-32 pb-16">
+      <div className="bg-gradient-to-b from-primary/10 to-background pt-32 pb-16 relative">
         <div className="container mx-auto px-6">
           
           <div className="max-w-4xl">
@@ -81,6 +81,13 @@ export default function Journey() {
             </p>
           </div>
         </div>
+        
+        {/* Right side image */}
+        <img 
+          src="/element_3.png" 
+          alt="Journey illustration" 
+          className="absolute top-24 right-24 w-[600px] h-[500px] object-contain pointer-events-none z-10"
+        />
       </div>
 
       {/* Timeline */}
