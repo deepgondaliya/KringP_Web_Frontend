@@ -136,7 +136,7 @@ const JourneyPath = ({ steps }: JourneyPathProps) => {
           return (
             <div
               key={index}
-              ref={(el) => (stepRefs.current[index] = el)}
+              ref={(el) => { stepRefs.current[index] = el; }}
               data-index={index}
               className={`flex items-center gap-8 md:gap-16 ${
                 isLeft ? "flex-row" : "flex-row-reverse"
