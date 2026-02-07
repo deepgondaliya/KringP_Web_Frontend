@@ -111,13 +111,8 @@ export default function HelpCenter() {
       <Navbar />
       
       {/* Header */}
-      <div className="bg-gradient-to-b from-primary/10 to-background pt-32 pb-16">
+      <div className="bg-gradient-to-b from-primary/10 to-background pt-24 pb-12 md:pt-32 md:pb-16">
         <div className="container mx-auto px-6">
-          <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8">
-            <ArrowLeft size={20} />
-            Back to Home
-          </Link>
-          
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-gradient-yellow flex items-center justify-center">
@@ -125,12 +120,12 @@ export default function HelpCenter() {
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4 md:mb-6">
               How can we{" "}
               <span className="text-gradient-yellow">help?</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
               Search our knowledge base or browse categories to find answers to your questions.
             </p>
             

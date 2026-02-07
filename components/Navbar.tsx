@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronDown, Sparkles, Building2, Users, Heart, BookOpen, Newspaper, HelpCircle, Shield, FileText, Play } from "lucide-react"
+import { Menu, X, ChevronDown, Sparkles, Building2, Users, Heart, BookOpen, Newspaper, HelpCircle, Shield, FileText, Play, Apple, Smartphone } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
 
@@ -208,13 +208,25 @@ const Navbar = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
-              Log In
-            </Button>
-            <Button variant="default" size="sm">
-              Get Started
-            </Button>
+          <div className="hidden md:flex items-center gap-3">
+            <a 
+              href="https://apps.apple.com/app/kringp" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-lg hover:bg-black/90 transition-all hover:scale-105 text-sm font-semibold"
+            >
+              <Apple className="w-5 h-5" />
+              App Store
+            </a>
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.kringp" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-orange-purple text-white rounded-lg hover:scale-105 transition-all text-sm font-semibold glow-combo-sm hover:glow-combo"
+            >
+              <Smartphone className="w-5 h-5" />
+              Play Store
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -282,13 +294,25 @@ const Navbar = () => {
                 Reels
               </Link>
 
-              <div className="flex flex-col gap-2 pt-4">
-                <Button variant="ghost" className="w-full">
-                  Log In
-                </Button>
-                <Button variant="default" className="w-full">
-                  Get Started
-                </Button>
+              <div className="flex flex-col gap-3 pt-4">
+                <a 
+                  href="https://apps.apple.com/app/kringp" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 px-4 py-3 bg-black text-white rounded-lg hover:bg-black/90 transition-all font-semibold"
+                >
+                  <Apple className="w-5 h-5" />
+                  App Store
+                </a>
+                <a 
+                  href="https://play.google.com/store/apps/details?id=com.kringp" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-orange-purple text-white rounded-lg transition-all font-semibold"
+                >
+                  <Smartphone className="w-5 h-5" />
+                  Play Store
+                </a>
               </div>
             </div>
           </div>

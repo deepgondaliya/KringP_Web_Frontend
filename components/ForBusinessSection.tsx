@@ -6,62 +6,62 @@ const ForBusinessSection = () => {
   const businessSteps = [
     {
       iconName: "UserPlus",
-      title: "Create Business Account",
-      description: "Sign up for free and set up your business profile with your brand details and campaign preferences.",
+      title: "Create Your Business Account",
+      description: "Sign up for free and set up your business profile to start discovering local creators and influencers that match your goals.",
       details: [
-        "Free account creation",
-        "Add brand logo & description",
-        "Set campaign preferences"
+        "Free business account creation",
+        "Add business logo, description & location",
+        "Set campaign goals and preferences"
       ]
     },
     {
       iconName: "Search",
       title: "Discover Creators",
-      description: "Browse our extensive database of verified creators and find the perfect match for your brand.",
+      description: "Explore a growing network of verified local and global creators and find the right influencers for your business campaigns using smart filters and real-time insights.",
       details: [
-        "Access to 5,000+ creators",
-        "View detailed profiles",
-        "Check authenticity scores"
+        "Access thousands of verified creators",
+        "View detailed creator profiles & performance analytics",
+        "Check authenticity and engagement scores"
       ]
     },
     {
       iconName: "Filter",
       title: "Smart Filtering",
-      description: "Use powerful filters to narrow down creators by niche, location, engagement rate, and audience demographics.",
+      description: "Use advanced filters to quickly find local creators and influencers that perfectly match your business goals, audience, and campaign requirements.",
       details: [
-        "Filter by niche & category",
-        "Location-based search",
-        "Engagement rate thresholds"
+        "Filter creators by niche, category & platform",
+        "Location-based creator search (city, region, country)",
+        "Set engagement rate and performance thresholds"
       ]
     },
     {
       iconName: "MessageSquare",
       title: "Connect & Chat",
-      description: "Reach out directly to creators. Discuss your campaign, negotiate terms, and build relationships.",
+      description: "Connect directly with local and global creators to discuss campaign details, align expectations, and build long-term business–creator relationships.",
       details: [
-        "In-app messaging system",
-        "Share campaign briefs",
-        "Real-time notifications"
+        "Secure in-app messaging with creators",
+        "Share campaign briefs, goals & timelines",
+        "Get real-time chat notifications"
       ]
     },
     {
       iconName: "FileCheck",
       title: "Finalize Collaboration",
-      description: "Agree on deliverables, timeline, and pricing. Everything documented and transparent.",
+      description: "Confirm your collaboration by aligning on deliverables, timelines, and pricing with creators—keeping everything clear, transparent, and easy to manage.",
       details: [
-        "Clear deliverable tracking",
-        "Timeline management",
-        "Contract generation"
+        "Clear deliverable and milestone tracking",
+        "Campaign timeline and deadline management",
+        "Documented collaboration terms inside the platform"
       ]
     },
     {
       iconName: "CreditCard",
-      title: "Secure Payment",
-      description: "Pay securely through our platform. Funds held in escrow until work is delivered and approved.",
+      title: "Secure Payments",
+      description: "Make payments securely through the KringP platform with complete transparency. Funds are protected until campaign deliverables are completed and approved.",
       details: [
-        "Escrow protection",
-        "20% platform fee only",
-        "Multiple payment options"
+        "Escrow-style payment protection",
+        "Simple 20% platform service fee",
+        "Multiple secure payment options"
       ]
     },
   ];
@@ -83,12 +83,12 @@ const ForBusinessSection = () => {
             <Building2 className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">Business Journey</span>
           </div>
-          <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6">
-            Your Path to <span className="text-gradient-orange">Growth</span>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            Your Path to <span className="text-gradient-orange">Business Growth</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            From discovery to campaign success. Follow the simple steps to connect 
-            with the perfect creators for your brand.
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+            From discovery to campaign success. Follow these simple steps to connect 
+            with the perfect local and global creators for your brand.
           </p>
         </div>
 

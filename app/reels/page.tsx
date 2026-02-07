@@ -58,13 +58,13 @@ export default function Reels() {
         <img 
           src="/element_1.png" 
           alt="Decorative element" 
-          className="absolute top-16 left-48 w-[560px] h-[320px] pointer-events-none rotate-12 z-10"
+          className="absolute top-32 left-2 w-[220px] h-[120px] lg:top-16 lg:left-48 lg:w-[560px] lg:h-[320px] pointer-events-none rotate-12 z-10"
         />
         {/* Top Right PNG Element */}
         <img 
           src="/element_2.png" 
           alt="Decorative element" 
-          className="absolute top-18 right-48 w-[250px] h-[250px] pointer-events-none -rotate-12 z-10"
+          className="absolute top-36 right-2 w-[100px] h-[100px] lg:top-18 lg:right-48 lg:w-[250px] lg:h-[250px] pointer-events-none -rotate-12 z-10"
         />
         <section className="py-20 px-6">
           <div className="container mx-auto max-w-6xl">
@@ -73,10 +73,10 @@ export default function Reels() {
                 <Instagram className="w-4 h-4 text-white" />
                 <span className="text-sm font-medium text-white">Featured Reels</span>
               </div>
-              <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6">
+              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
                 Trending <span className="text-gradient-orange">Reels</span>
               </h1>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Discover amazing content from KringP creators. Watch, engage, and get inspired.
               </p>
             </div>

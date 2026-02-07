@@ -6,62 +6,62 @@ const ForCreatorsSection = () => {
   const creatorSteps = [
     {
       iconName: "UserPlus",
-      title: "Create Your Profile",
-      description: "Sign up in minutes and build your professional creator profile that showcases your unique style and strengths.",
+      title: "Create Your Creator Profile",
+      description: "Sign up in minutes and build a professional creator profile that highlights your niche, content style, and strengths—making it easier for local and global businesses to find you.",
       details: [
-        "Quick 2-minute signup process",
-        "Showcase your niche & expertise",
-        "Add portfolio samples"
+        "Quick 2-minute creator signup",
+        "Showcase your niche, expertise & location",
+        "Add portfolio samples and past work"
       ]
     },
     {
       iconName: "Link2",
-      title: "Link Your Socials",
-      description: "Connect your Instagram, YouTube, or Facebook platforms to automatically sync your analytics and performance data.",
+      title: "Link Your Social Accounts",
+      description: "Connect your Instagram, YouTube & Facebook accounts to automatically sync your analytics and performance data, making it easier for businesses to discover and evaluate your work.",
       details: [
         "One-click social media integration",
-        "Auto-sync follower counts",
-        "Real-time engagement tracking"
+        "Auto-sync follower counts and reach",
+        "Real-time engagement and performance tracking"
       ]
     },
     {
       iconName: "Eye",
-      title: "Get Discovered",
-      description: "Brands search and find you based on your niche, location, engagement rate, and content quality.",
+      title: "Get Discovered by Brands",
+      description: "Let businesses find you based on your niche, location, engagement, and content quality, so you can connect with the right campaigns and opportunities.",
       details: [
-        "Appear in brand searches",
-        "Get matched with relevant brands",
-        "Receive collaboration requests"
+        "Appear in brand and business searches",
+        "Get matched with relevant local and global businesses",
+        "Receive collaboration requests directly through the platform"
       ]
     },
     {
       iconName: "TrendingUp",
       title: "Grow Your Metrics",
-      description: "Your analytics update automatically, showing brands your real growth and performance trends.",
+      description: "Showcase your real growth and performance trends to brands with automatically updated analytics, helping you stand out for the right collaborations.",
       details: [
-        "90-day performance graphs",
-        "Engagement rate calculations",
-        "Audience demographics display"
+        "90-day performance Dashboard",
+        "Automatic engagement rate tracking",
+        "Track your growth over time"
       ]
     },
     {
       iconName: "DollarSign",
       title: "Earn & Get Paid",
-      description: "Collaborate with brands and receive secure, transparent payments directly to your account.",
+      description: "Collaborate with businesses and get secure, transparent payments for your work, with funds protected until your deliverables are completed and approved.",
       details: [
-        "Secure escrow payments",
-        "Clear pricing structure",
-        "Fast payouts"
+        "Escrow-style payment protection",
+        "Clear and transparent pricing",
+        "Fast, reliable payouts"
       ]
     },
     {
       iconName: "Users",
       title: "Join the Community",
-      description: "Connect with fellow creators, share experiences, and grow together in our supportive community.",
+      description: "Connect with fellow creators, share experiences, and grow together in a supportive environment that also cares about your well-being.",
       details: [
         "Creator collaboration groups",
         "Peer networking opportunities",
-        "Mentorship programs"
+        "Access to mental health support"
       ]
     }
   ];
@@ -83,10 +83,10 @@ const ForCreatorsSection = () => {
             <Sparkles className="w-4 h-4 text-accent" />
             <span className="text-sm font-medium text-accent">Creator Journey</span>
           </div>
-          <h2 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Your Path to <span className="text-gradient-orange">Success</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Follow the journey from signup to success. Every step brings you closer to 
             real opportunities and meaningful collaborations.
           </p>

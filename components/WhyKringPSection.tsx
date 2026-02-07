@@ -4,28 +4,33 @@ const WhyKringPSection = () => {
   const features = [
     {
       title: "Smart Proposal System",
-      description: "Businesses create proposals, influencers apply based on interest. Review profiles and chat directly before collaboration.",
+      description: "Businesses create proposals, and influencers apply based on interest. Review profiles, chat directly, and collaborate with confidence.",
       highlight: "📋",
     },
     {
       title: "Lifetime Income Potential",
-      description: "Influencers build trust and reputation through client reviews, creating opportunities for sustainable long-term income.",
+      description: "Influencers build trust and reputation through client reviews, unlocking sustainable long-term earnings.",
       highlight: "💰",
     },
     {
       title: "Worldwide Connections",
-      description: "Connect influencers and businesses globally. Break geographical barriers and expand your reach internationally.",
+      description: "Connect businesses and creators globally. Break geographical barriers and expand your reach internationally.",
       highlight: "🌍",
     },
     {
       title: "Secure Payments & Privacy",
-      description: "Secure in-app payments with no delays. Your data stays private - never shared with third parties.",
+      description: "Safe in-app payments with escrow-style protection. Your data stays private and never shared with third parties.",
       highlight: "🔐",
     },
     {
       title: "Free to Use",
-      description: "Completely free for businesses. We only take 20% from influencer's successful collaboration amount.",
+      description: "You can use KringP completely free. We charge only 20% from successful influencer collaborations.",
       highlight: "💸",
+    },
+    {
+      title: "Data-Driven Creator Discovery",
+      description: "Advanced analytics, engagement metrics, and location-based filters help businesses find the right influencers—locally or globally—for every campaign.",
+      highlight: "📊",
     },
   ];
 
@@ -36,34 +41,34 @@ const WhyKringPSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6">
+        <div className="text-center mb-12 md:mb-16">
+          <span className="inline-block px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs md:text-sm font-medium mb-4 md:mb-6">
             Why Choose Us
           </span>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            What Makes{" "}
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+            Why{" "}
             <span className="text-gradient-orange">KringP</span>{" "}
-            Different
+            Stands Out
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Connecting businesses and influencers worldwide with smart tools and lifetime opportunities.
+          <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
+            Global Connections. Local Opportunities. Real Results. KringP helps businesses and creators connect with smart tools, transparent processes, and lifetime collaboration potential.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <div
               key={index}
               className="group relative"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/8 to-accent/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative bg-card border border-border rounded-3xl p-8 h-full hover:border-primary/30 transition-all duration-300 hover:translate-y-[-4px]">
-                <div className="flex items-start gap-6">
-                  <div className="text-4xl">{feature.highlight}</div>
+              <div className="relative bg-card border border-border rounded-2xl md:rounded-3xl p-6 md:p-8 h-full hover:border-primary/30 transition-all duration-300 hover:translate-y-[-4px]">
+                <div className="flex items-start gap-4 md:gap-6">
+                  <div className="text-3xl md:text-4xl flex-shrink-0">{feature.highlight}</div>
                   <div>
-                    <h3 className="font-display text-2xl font-bold mb-3">{feature.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                    <h3 className="font-display text-lg md:text-xl lg:text-2xl font-bold mb-2 md:mb-3">{feature.title}</h3>
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
               </div>
@@ -72,8 +77,8 @@ const WhyKringPSection = () => {
         </div>
 
         {/* Tagline */}
-        <div className="text-center mt-16">
-          <p className="text-2xl font-display">
+        <div className="text-center mt-12 md:mt-16 px-4">
+          <p className="text-lg md:text-xl lg:text-2xl font-display">
             This is not just a business—
             <br />
             <span className="text-gradient-orange font-bold">this is a responsibility.</span>

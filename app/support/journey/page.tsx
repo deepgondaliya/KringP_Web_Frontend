@@ -59,7 +59,7 @@ export default function Journey() {
       <Navbar />
       
       {/* Header */}
-      <div className="bg-gradient-to-b from-primary/10 to-background pt-32 pb-16 relative">
+      <div className="bg-gradient-to-b from-primary/10 to-background pt-24 md:pt-32 md:pb-16 relative">
         <div className="container mx-auto px-6">
           
           <div className="max-w-4xl">
@@ -70,12 +70,12 @@ export default function Journey() {
               <span className="text-gradient-orange font-semibold">Our Journey</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4 md:mb-6">
               The Road That Brought Us{" "}
               <span className="text-gradient-orange">Here</span>
             </h1>
             
-            <p className="text-muted-foreground max-w-2xl">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl">
               Every great platform has a story. Discover how KringP evolved from a simple idea 
               into a thriving ecosystem for creators and businesses.
             </p>
@@ -86,7 +86,7 @@ export default function Journey() {
         <img 
           src="/element_3.png" 
           alt="Journey illustration" 
-          className="absolute top-24 right-24 w-[600px] h-[500px] object-contain pointer-events-none z-10"
+          className="mx-auto mt-8 w-[340px] h-[340px] md:absolute md:top-24 md:right-24 md:w-[600px] md:h-[500px] object-contain pointer-events-none z-10"
         />
       </div>
 

@@ -24,7 +24,7 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage(prev => prev >= totalImages ? 1 : prev + 1);
-    }, 1000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -40,7 +40,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,102,0,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(168,85,247,0.06)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-[58%_42%] gap-12 items-center">
           {/* Left Content */}
           <div className="max-w-3xl mx-auto lg:mx-0 text-center lg:text-left">
             {/* Badge */}
@@ -57,18 +57,15 @@ const HeroSection = () => {
                   <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" className="text-red-500"/>
                 </svg>
               </div>
-              <span className="text-base font-semibold text-gradient-orange">Meta & Google API Approved</span>
+              <span className="text-sm md:text-base font-semibold text-gradient-orange">Meta & Google API Approved</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="font-display text-5xl md:text-7xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 animate-fade-in-up">
-              Where{" "}
-              <span className="text-gradient-orange">Businesses</span>
-              <br />
-              Meet{" "}
+            <h1 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] xl:text-[3.25rem] font-bold leading-[1.15] mb-8 animate-fade-in-up">
+              Where <span className="text-gradient-orange">Brands</span> Meet{" "}
               <span className="relative inline-block">
-                <span className="text-gradient-orange">Influence</span>
-                <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
+                <span className="text-gradient-orange">Local Influence</span>
+                <svg className="absolute -bottom-2 md:-bottom-5 left-0 w-full" viewBox="0 0 200 12" fill="none">
                   <defs>
                     <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                       <stop offset="0%" stopColor="hsl(25 95% 53%)" />
@@ -78,25 +75,24 @@ const HeroSection = () => {
                   <path d="M2 10C50 2 150 2 198 10" stroke="url(#heroGradient)" strokeWidth="3" strokeLinecap="round" />
                 </svg>
               </span>
+              <span className=""> — </span>
+              <span className="text-gradient-orange">Globally</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl md:text-xl text-muted-foreground mb-10 leading-relaxed animate-fade-in-up-delayed">
-              India's smartest influencer marketplace.
-              <span> Connect with</span>{" "}
-              <span>perfect creators through real-time analytics, niche-based</span>{" "}
-              <span>targeting, and advanced filters.</span>
+            <p className="text-base md:text-lg text-muted-foreground mb-10 leading-relaxed animate-fade-in-up-delayed max-w-2xl">
+              KringP is a global influencer marketplace that helps businesses find local creators, connect with the right influencers, and run high-impact campaigns using real-time analytics, location-based targeting, and advanced discovery filters.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center lg:items-start lg:justify-start justify-center gap-4 mb-16 animate-fade-in-up-delayed">
-              <Button variant="hero" size="lg" className="group">
+            <div className="flex flex-row flex-wrap items-center lg:items-start lg:justify-start justify-center gap-3 mb-16 animate-fade-in-up-delayed">
+              <Button variant="hero" className="group h-11 px-6 md:h-14 md:px-10 md:text-base">
                 I'm a Business
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="purpleOutline" size="lg" className="group">
+              <Button variant="purpleOutline" className="group h-11 px-6 md:h-14 md:px-10 md:text-base">
                 I'm a Creator
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
 
@@ -119,6 +115,26 @@ const HeroSection = () => {
           </div>
 
           {/* Right Image */}
+          <div className="flex lg:hidden justify-center items-center mt-12 mb-8 animate-fade-in-up relative">
+            <div className="relative max-w-xs">
+              <img 
+                src={`/model_${currentImage}.png`}
+                alt="KringP Platform Illustration" 
+                className="w-full h-auto transition-opacity duration-500"
+                key={currentImage}
+              />
+              {/* Influencer Tag */}
+              <div className="absolute top-4 left-4 px-3 py-1.5 bg-gradient-to-r from-primary to-accent rounded-full shadow-lg">
+                <span className="text-white font-semibold text-xs">
+                  {influencerTags[currentImage - 1]}
+                </span>
+              </div>
+              {/* Optional glow effect behind the image */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-3xl -z-10 scale-75" />
+            </div>
+          </div>
+
+          {/* Right Image - Desktop */}
           <div className="hidden lg:flex justify-center items-center animate-fade-in-right relative">
             <div className="relative">
               <img 

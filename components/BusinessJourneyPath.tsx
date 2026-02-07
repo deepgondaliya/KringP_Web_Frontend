@@ -91,9 +91,9 @@ const BusinessJourneyPath = ({ steps }: JourneyPathProps) => {
 
   return (
     <div ref={containerRef} className="relative py-12">
-      {/* SVG Curved Path */}
+      {/* SVG Curved Path - Hidden on mobile */}
       <svg
-        className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-full max-w-4xl pointer-events-none"
+        className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 h-full w-full max-w-4xl pointer-events-none"
         viewBox="0 0 800 1400"
         preserveAspectRatio="xMidYMin slice"
         fill="none"
@@ -183,14 +183,14 @@ const BusinessJourneyPath = ({ steps }: JourneyPathProps) => {
               key={index}
               ref={(el) => { stepRefs.current[index] = el; }}
               data-index={index}
-              className="relative flex items-center justify-center min-h-[180px] mb-12 last:mb-0"
+              className="relative flex items-center justify-center mb-12 md:mb-12 md:min-h-[180px] last:mb-0"
             >
               {/* Content Card */}
               <div
-                className={`absolute ${isLeft ? 'left-0' : 'right-0'} w-full max-w-md transition-all duration-700 ${
+                className={`w-full md:max-w-md md:absolute ${isLeft ? 'md:left-0' : 'md:right-0'} transition-all duration-700 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
-                    : `opacity-0 ${isLeft ? "-translate-x-12" : "translate-x-12"}`
+                    : `opacity-0 ${isLeft ? "md:-translate-x-12" : "md:translate-x-12"}`
                 }`}
               >
                 <div
@@ -222,13 +222,13 @@ const BusinessJourneyPath = ({ steps }: JourneyPathProps) => {
                       >
                         Step {index + 1}
                       </span>
-                      <h3 className="font-display text-xl md:text-2xl font-bold text-foreground">
+                      <h3 className="font-display text-lg md:text-xl font-bold text-foreground">
                         {step.title}
                       </h3>
                     </div>
                   </div>
                   
-                  <p className="text-muted-foreground mb-4">{step.description}</p>
+                  <p className="text-sm text-muted-foreground mb-4">{step.description}</p>
                   
                   {step.details && (
                     <ul className="space-y-2">

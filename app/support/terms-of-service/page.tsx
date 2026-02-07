@@ -175,7 +175,7 @@ export default function TermsOfService() {
       <Navbar />
       
       {/* Header */}
-      <div className="bg-gradient-to-b from-primary/10 to-background pt-32 pb-16 relative">
+      <div className="bg-gradient-to-b from-primary/10 to-background pt-24 pb-8 md:pt-32 md:pb-16 relative">
         <div className="container mx-auto px-6">
           
           <div className="max-w-4xl">
@@ -186,12 +186,12 @@ export default function TermsOfService() {
               <span className="text-gradient-orange font-semibold">Legal</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4 md:mb-6">
               Terms of{" "}
               <span className="text-gradient-orange">Service</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground max-w-2xl">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl">
               Please read these terms carefully before using KringP. By using our platform, 
               you agree to be bound by these terms.
             </p>
@@ -206,7 +206,7 @@ export default function TermsOfService() {
         <img 
           src="/element_5.png" 
           alt="Terms of service illustration" 
-          className="absolute top-20 right-24 w-[500px] h-[400px] object-contain pointer-events-none z-10"
+          className="mx-auto mt-8 w-[300px] h-[300px] md:absolute md:top-20 md:right-24 md:w-[500px] md:h-[400px] object-contain pointer-events-none z-10"
         />
       </div>
 
@@ -242,7 +242,7 @@ export default function TermsOfService() {
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <FileText className="w-6 h-6 text-primary" />
                     </div>
-                    <h2 className="text-2xl font-display font-bold text-foreground">
+                    <h2 className="text-lg md:text-2xl font-display font-bold text-foreground">
                       {section.title}
                     </h2>
                   </div>

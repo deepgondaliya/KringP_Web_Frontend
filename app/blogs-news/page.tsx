@@ -76,18 +76,18 @@ export default function BlogsNews() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-18 pb-16 px-6">
+      <section className="pt-24 md:pt-2 pb-12 md:pb-16 px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-2 md:gap-12 items-center">
             {/* Left side - Content */}
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-accent border border-primary/40 mb-6">
                 <span className="text-sm font-medium text-white">Blogs & News</span>
               </div>
-              <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6">
+              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 md:mb-6">
                 Insights, Tips & <span className="text-gradient-orange">Updates</span>
               </h1>
-              <p className="text-muted-foreground max-w-2xl mx-auto lg:mx-0">
+              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto lg:mx-0">
                 Stay updated with the latest creator tips, industry insights, and KringP announcements
               </p>
             </div>
@@ -97,7 +97,7 @@ export default function BlogsNews() {
               <img 
                 src="/news_1.png" 
                 alt="News illustration" 
-                className="w-[520px] h-[520px] object-contain"
+                className="w-full max-w-xs md:max-w-md lg:max-w-lg object-contain"
               />
             </div>
           </div>
