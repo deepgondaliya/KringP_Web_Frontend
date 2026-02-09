@@ -210,7 +210,7 @@ const Navbar = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <a 
-              href="https://apps.apple.com/app/kringp" 
+              href="https://apps.apple.com/in/app/kringp/id6747716001" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-lg hover:bg-black/90 transition-all hover:scale-105 text-sm font-semibold"
@@ -219,7 +219,7 @@ const Navbar = () => {
               App Store
             </a>
             <a 
-              href="https://play.google.com/store/apps/details?id=com.kringp" 
+              href="https://play.google.com/store/apps/details?id=com.app.kringp" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-gradient-orange-purple text-white rounded-lg hover:scale-105 transition-all text-sm font-semibold glow-combo-sm hover:glow-combo"
@@ -296,7 +296,7 @@ const Navbar = () => {
 
               <div className="flex flex-col gap-3 pt-4">
                 <a 
-                  href="https://apps.apple.com/app/kringp" 
+                  href="https://apps.apple.com/in/app/kringp/id6747716001" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-black text-white rounded-lg hover:bg-black/90 transition-all font-semibold"
@@ -305,7 +305,7 @@ const Navbar = () => {
                   App Store
                 </a>
                 <a 
-                  href="https://play.google.com/store/apps/details?id=com.kringp" 
+                  href="https://play.google.com/store/apps/details?id=com.app.kringp" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-gradient-orange-purple text-white rounded-lg transition-all font-semibold"

@@ -1,32 +1,31 @@
-import { Instagram, Twitter, Linkedin, Youtube, Mail, Phone, MapPin, Heart } from "lucide-react";
+import { Instagram, Twitter, Linkedin, Youtube, Mail, Phone, MapPin, Heart, Facebook } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
-    product: [
-      { label: "Features", href: "#features" },
-      { label: "For Business", href: "#for-business" },
-      { label: "For Creators", href: "#for-creators" },
-      { label: "Pricing", href: "#" },
-    ],
-    company: [
-      { label: "About Us", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Press", href: "#" },
+    features: [
+      { label: "For Business", href: "/features/business-flow" },
+      { label: "For Creators", href: "/features/creator-flow" },
+      { label: "Mental Health", href: "/features/mental-health" },
+      { label: "Testimonials", href: "/features/testimonials" },
     ],
     support: [
-      { label: "Help Center", href: "#" },
-      { label: "Contact", href: "#" },
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
+      { label: "Help Center", href: "/support/help-center" },
+      { label: "Journey", href: "/support/journey" },
+      { label: "Privacy Policy", href: "/support/privacy-policy" },
+      { label: "Terms of Service", href: "/support/terms-of-service" },
+    ],
+    explore: [
+      { label: "Blogs & News", href: "/blogs-news" },
+      { label: "Reels", href: "/reels" },
     ],
   };
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Youtube, href: "#", label: "YouTube" },
+    { icon: Instagram, href: "https://www.instagram.com/kringp_india?igsh=MmxoYmxkenR0a2Ri", label: "Instagram" },
+    { icon: Facebook, href: "https://www.facebook.com/share/1AYkneZNuD/", label: "Facebook" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/kringp/", label: "LinkedIn" },
+    { icon: Twitter, href: "https://x.com/KringP_india", label: "Twitter" },
+    { icon: Youtube, href: "https://youtube.com/@kringp_india?si=fUUqlr0sjkqS9Dy9", label: "YouTube" },
   ];
 
   return (
@@ -62,27 +61,13 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Product Links */}
+          {/* Features Links */}
           <div>
-            <h4 className="font-display font-semibold mb-4">Product</h4>
+            <h4 className="font-display font-semibold mb-4">Features</h4>
             <ul className="space-y-3">
-              {footerLinks.product.map((link, index) => (
+              {footerLinks.features.map((link, index) => (
                 <li key={index}>
                   <a href={link.href} className="text-muted-foreground hover:text-accent transition-colors">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company Links */}
-          <div>
-            <h4 className="font-display font-semibold mb-4">Company</h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link, index) => (
-                <li key={index}>
-                  <a href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
                     {link.label}
                   </a>
                 </li>
@@ -103,6 +88,20 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+
+          {/* Explore Links */}
+          <div>
+            <h4 className="font-display font-semibold mb-4">Explore</h4>
+            <ul className="space-y-3">
+              {footerLinks.explore.map((link, index) => (
+                <li key={index}>
+                  <a href={link.href} className="text-muted-foreground hover:text-primary transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Contact Info */}
@@ -111,24 +110,24 @@ const Footer = () => {
             <Mail className="w-4 h-4" />
             <span>hello@kringp.com</span>
           </a>
-          <a href="tel:+919876543210" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+          {/* <a href="tel:+919876543210" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
             <Phone className="w-4 h-4" />
             <span>+91 98765 43210</span>
-          </a>
-          <div className="flex items-center gap-2 text-muted-foreground">
+          </a> */}
+          {/* <div className="flex items-center gap-2 text-muted-foreground">
             <MapPin className="w-4 h-4" />
             <span>Ahmedabad, India</span>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-border">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} KringP. All rights reserved.
+            © {new Date().getFullYear()} KringP (Mackring9 Private Limited). All rights reserved.
           </p>
-          <p className="text-muted-foreground text-sm flex items-center gap-2">
+          {/* <p className="text-muted-foreground text-sm flex items-center gap-2">
             Made with <Heart className="w-4 h-4 text-accent fill-accent" /> in India
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>
