@@ -1,9 +1,6 @@
-"use client";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { Calendar, Clock, ArrowLeft, Tag, Share2, Bookmark } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -192,8 +189,13 @@ const posts = [
   },
 ];
 
-export default function BlogsNewsDetail() {
-  const params = useParams();
+export function generateStaticParams() {
+  return posts.map((post) => ({
+    id: post.id.toString(),
+  }));
+}
+
+export default function BlogsNewsDetail({ params }: { params: { id: string } }) {
   const post = posts.find((p) => p.id === Number(params.id));
 
   if (!post) {
