@@ -1,0 +1,8 @@
+name: kringp-web-frontend
+static_sites:
+  - name: kringp
+    build_command: npm run build
+    output_dir: out
+    routes:
+      - path: /
+    error_document: 404.html
