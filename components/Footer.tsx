@@ -37,12 +37,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <a href="#" className="flex items-center gap-2 mb-6 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-orange-purple flex items-center justify-center glow-orange-sm group-hover:glow-purple transition-all duration-300">
-                <span className="text-primary-foreground font-display font-bold text-xl">K</span>
-              </div>
-              <span className="font-display font-bold text-2xl text-foreground">
-                Kring<span className="text-gradient-orange">P</span>
-              </span>
+              <img src="/logo.png" alt="KringP Logo" className="w-18 h-12 rounded-xl" />
             </a>
             <p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
               Where influence meets impact. Connecting local businesses with authentic creators across India.
