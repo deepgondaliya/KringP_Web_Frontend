@@ -85,32 +85,19 @@ const HeroSection = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-row flex-wrap items-center lg:items-start lg:justify-start justify-center gap-3 mb-16 animate-fade-in-up-delayed">
-              <Button variant="hero" className="group h-11 px-6 md:h-14 md:px-10 md:text-base">
-                I'm a Business
-                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="purpleOutline" className="group h-11 px-6 md:h-14 md:px-10 md:text-base">
-                I'm a Creator
-                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 animate-scale-in">
-              {[
-                { value: "5K+", label: "Active Creators" },
-                { value: "4K+", label: "Businesses" },
-                { value: "10K+", label: "Collaborations" },
-                { value: "₹0.5Cr+", label: "Paid to Creators" },
-              ].map((stat, index) => (
-                <div key={index} className="text-center lg:text-left group">
-                  <div className="font-display text-3xl md:text-4xl font-bold text-gradient-orange mb-2 group-hover:scale-110 transition-transform">
-                    {stat.value}
-                  </div>
-                  <div className="text-muted-foreground text-sm">{stat.label}</div>
-                </div>
-              ))}
+            <div className="flex flex-row flex-wrap items-center lg:items-start lg:justify-start justify-center gap-3 animate-fade-in-up-delayed">
+              <a href="/features/business-flow">
+                <Button variant="hero" className="group h-11 px-6 md:h-14 md:px-10 md:text-base">
+                  I'm a Business
+                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
+              <a href="/features/creator-flow">
+                <Button variant="purpleOutline" className="group h-11 px-6 md:h-14 md:px-10 md:text-base">
+                  I'm a Creator
+                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </div>
           </div>
 

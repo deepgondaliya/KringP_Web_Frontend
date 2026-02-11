@@ -1,8 +1,13 @@
-import { UserPlus, Search, Filter, MessageSquare, FileCheck, CreditCard, Rocket, Building2 } from "lucide-react";
+"use client";
+
+import { UserPlus, Search, Filter, MessageSquare, FileCheck, CreditCard, Rocket, Building2, Apple, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import BusinessJourneyPath from "@/components/BusinessJourneyPath";
+import { useState } from "react";
+import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 const ForBusinessSection = () => {
+  const [showAppButtons, setShowAppButtons] = useState(false);
   const businessSteps = [
     {
       iconName: "UserPlus",
@@ -101,11 +106,28 @@ const ForBusinessSection = () => {
             <span className="text-3xl font-bold text-primary">Free</span>
             <span className="text-muted-foreground">to start</span>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="hero" className="text-lg px-8">
-              Start Finding Creators
-            </Button>
-          </div>
+          {!showAppButtons ? (
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" variant="hero" className="text-lg px-8" onClick={() => setShowAppButtons(true)}>
+                Start Finding Creators
+              </Button>
+            </div>
+          ) : (
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="https://apps.apple.com/in/app/kringp/id6747716001" target="_blank" rel="noopener noreferrer">
+                <button className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-lg hover:bg-black/90 transition-all hover:scale-105 text-base font-semibold">
+                  <Apple className="w-5 h-5" />
+                  App Store
+                </button>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.app.kringp" target="_blank" rel="noopener noreferrer">
+                <button className="flex items-center gap-2 px-6 py-3 bg-gradient-orange-purple text-white rounded-lg hover:scale-105 transition-all text-base font-semibold glow-combo-sm hover:glow-combo">
+                  <Smartphone className="w-5 h-5" />
+                  Play Store
+                </button>
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </section>

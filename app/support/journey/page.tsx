@@ -3,8 +3,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { ArrowLeft, MapPin, Rocket, Target, Users, Sparkles, Heart, Trophy, ArrowRight } from "lucide-react";
+import { ArrowLeft, MapPin, Rocket, Target, Users, Sparkles, Heart, Trophy, ArrowRight, Apple, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const journeySteps = [
   {
@@ -52,6 +53,7 @@ const journeySteps = [
 ];
 
 export default function Journey() {
+  const [showAppButtons, setShowAppButtons] = useState(false);
   return (
     <div className="min-h-screen bg-background relative">
       {/* Grid Pattern Background */}
@@ -153,12 +155,31 @@ export default function Journey() {
             Join thousands of creators and businesses who are writing the next chapter with us.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-accent text-white hover:opacity-90">
-              Start Your Journey <ArrowRight size={18} />
-            </Button>
-            <Button size="lg" variant="outline" className="border-primary hover:bg-primary/10">
-              Learn More
-            </Button>
+            {!showAppButtons ? (
+              <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-accent text-white hover:opacity-90" onClick={() => setShowAppButtons(true)}>
+                Start Your Journey <ArrowRight size={18} />
+              </Button>
+            ) : (
+              <>
+                <a href="https://apps.apple.com/in/app/kringp/id6747716001" target="_blank" rel="noopener noreferrer">
+                  <button className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-lg hover:bg-black/90 transition-all hover:scale-105 text-base font-semibold">
+                    <Apple className="w-5 h-5" />
+                    App Store
+                  </button>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.app.kringp" target="_blank" rel="noopener noreferrer">
+                  <button className="flex items-center gap-2 px-6 py-3 bg-gradient-orange-purple text-white rounded-lg hover:scale-105 transition-all text-base font-semibold glow-combo-sm hover:glow-combo">
+                    <Smartphone className="w-5 h-5" />
+                    Play Store
+                  </button>
+                </a>
+              </>
+            )}
+            <a href="/support/help-center">
+              <Button size="lg" variant="outline" className="border-primary hover:bg-primary/10">
+                Learn More
+              </Button>
+            </a>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Star, Quote, Building2, Sparkles, TrendingUp, Users, Heart } from "lucide-react";
+import { Star, Quote, Building2, Sparkles, TrendingUp, Users, Heart, Apple, Smartphone } from "lucide-react";
 
 const testimonials = [
   {
@@ -74,6 +74,7 @@ const stats = [
 
 export default function Testimonials() {
   const [visibleCards, setVisibleCards] = useState<number[]>([]);
+  const [showAppButtons, setShowAppButtons] = useState(false);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -276,13 +277,35 @@ export default function Testimonials() {
               Join thousands of creators and businesses who are already thriving on KringP. 
               Your story could be next.
             </p>
-            <div className="flex flex-row gap-3 md:gap-4 justify-center">
-              <button className="px-6 py-3 md:px-8 md:py-4 bg-gradient-purple-orange text-primary-foreground font-semibold text-sm md:text-base rounded-xl hover:opacity-90 transition-opacity">
-                I'm a Creator
-              </button>
-              <button className="px-6 py-3 md:px-8 md:py-4 bg-card border border-primary text-primary font-semibold text-sm md:text-base rounded-xl hover:bg-primary/10 transition-colors">
-                I'm a Business
-              </button>
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+              {!showAppButtons ? (
+                <button 
+                  onClick={() => setShowAppButtons(true)}
+                  className="px-6 py-3 md:px-8 md:py-4 bg-gradient-purple-orange text-primary-foreground font-semibold text-sm md:text-base rounded-xl hover:opacity-90 transition-opacity"
+                >
+                  Start Your Journey
+                </button>
+              ) : (
+                <>
+                  <a href="https://apps.apple.com/in/app/kringp/id6747716001" target="_blank" rel="noopener noreferrer">
+                    <button className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-lg hover:bg-black/90 transition-all hover:scale-105 text-base font-semibold">
+                      <Apple className="w-5 h-5" />
+                      App Store
+                    </button>
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.app.kringp" target="_blank" rel="noopener noreferrer">
+                    <button className="flex items-center gap-2 px-6 py-3 bg-gradient-orange-purple text-white rounded-lg hover:scale-105 transition-all text-base font-semibold glow-combo-sm hover:glow-combo">
+                      <Smartphone className="w-5 h-5" />
+                      Play Store
+                    </button>
+                  </a>
+                </>
+              )}
+              <a href="/support/help-center">
+                <button className="px-6 py-3 md:px-8 md:py-4 bg-card border border-primary text-primary font-semibold text-sm md:text-base rounded-xl hover:bg-primary/10 transition-colors">
+                  Learn More
+                </button>
+              </a>
             </div>
           </div>
         </div>

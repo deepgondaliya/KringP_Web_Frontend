@@ -6,13 +6,14 @@ const Footer = () => {
       { label: "For Business", href: "/features/business-flow" },
       { label: "For Creators", href: "/features/creator-flow" },
       { label: "Mental Health", href: "/features/mental-health" },
+      { label: "Journey", href: "/support/journey" },
       { label: "Testimonials", href: "/features/testimonials" },
     ],
     support: [
       { label: "Help Center", href: "/support/help-center" },
-      { label: "Journey", href: "/support/journey" },
       { label: "Privacy Policy", href: "/support/privacy-policy" },
       { label: "Terms of Service", href: "/support/terms-of-service" },
+      { label: "Payment & Refund Policy", href: "/support/payment-refund-policy" },
     ],
     explore: [
       { label: "Blogs & News", href: "/blogs-news" },
@@ -21,7 +22,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Instagram, href: "https://www.instagram.com/kringp_india?igsh=MmxoYmxkenR0a2Ri", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/kringp_india?igsh=OGZwcmVlaWFpMTZm", label: "Instagram" },
     { icon: Facebook, href: "https://www.facebook.com/share/1AYkneZNuD/", label: "Facebook" },
     { icon: Linkedin, href: "https://www.linkedin.com/company/kringp/", label: "LinkedIn" },
     { icon: Twitter, href: "https://x.com/KringP_india", label: "Twitter" },
@@ -36,7 +37,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-6 group">
+            <a href="/" className="flex items-center gap-2 mb-6 group">
               <img src="/logo.png" alt="KringP Logo" className="w-18 h-12 rounded-xl" />
             </a>
             <p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
@@ -100,19 +101,17 @@ const Footer = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="flex flex-wrap gap-6 py-8 border-t border-border mb-8">
+        <div className="flex flex-wrap items-center justify-between gap-6 py-8 border-t border-border mb-8">
           <a href="mailto:hello@kringp.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
             <Mail className="w-4 h-4" />
             <span>hello@kringp.com</span>
           </a>
-          {/* <a href="tel:+919876543210" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-            <Phone className="w-4 h-4" />
-            <span>+91 98765 43210</span>
-          </a> */}
-          {/* <div className="flex items-center gap-2 text-muted-foreground">
-            <MapPin className="w-4 h-4" />
-            <span>Ahmedabad, India</span>
-          </div> */}
+          <div className="flex items-center gap-2 text-muted-foreground">
+            <span>Ecosystem Support by:</span>
+            <a href="https://innovationfactory.ca/" target="_blank" rel="noopener noreferrer">
+              <img src="/supportby_1.png" alt="Support Logo" className="h-8 hover:opacity-80 transition-opacity" />
+            </a>
+          </div>
         </div>
 
         {/* Bottom Bar */}

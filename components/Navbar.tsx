@@ -25,6 +25,12 @@ const featureItems = [
     href: "/features/mental-health",
   },
   {
+    title: "Journey",
+    description: "Learn about our story and mission",
+    icon: BookOpen,
+    href: "/support/journey",
+  },
+  {
     title: "Testimonials",
     description: "Success stories from our community",
     icon: Users,
@@ -33,12 +39,6 @@ const featureItems = [
 ]
 
 const supportItems = [
-  {
-    title: "Journey",
-    description: "Learn about our story and mission",
-    icon: BookOpen,
-    href: "/support/journey",
-  },
   {
     title: "Terms Of Services",
     description: "Our terms and conditions",
@@ -50,6 +50,12 @@ const supportItems = [
     description: "How we protect your data",
     icon: Shield,
     href: "/support/privacy-policy",
+  },
+  {
+    title: "Payment & Refund Policy",
+    description: "Our payment and refund terms",
+    icon: FileText,
+    href: "/support/payment-refund-policy",
   },
   {
     title: "Help Center",
@@ -97,7 +103,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <a href="/" className="flex items-center gap-2 group">
             <img src="/logo.png" alt="KringP Logo" className="w-18 h-12 rounded-xl" />
           </a>
 

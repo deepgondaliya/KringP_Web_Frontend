@@ -2,7 +2,8 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Phone, Heart, MessageCircle, Headphones } from "lucide-react";
+import { Phone, Heart, MessageCircle, Headphones, Apple, Smartphone } from "lucide-react";
+import { useState } from "react";
 
 const emotions = [
   {
@@ -92,6 +93,7 @@ const emotions = [
 ];
 
 export default function MentalHealth() {
+  const [showAppButtons, setShowAppButtons] = useState(false);
   return (
     <div className="min-h-screen bg-background relative">
       {/* Full Page Grid Background */}
@@ -368,9 +370,29 @@ export default function MentalHealth() {
                 brightest.
               </p>
 
-              <button className="px-8 py-4 md:px-12 md:py-5 bg-gradient-orange-purple text-background font-bold text-base md:text-lg rounded-xl hover:scale-105 transition-all duration-300 shadow-xl shadow-primary/30 mb-6 md:mb-8">
-                Join KringP Today
-              </button>
+              {!showAppButtons ? (
+                <button 
+                  onClick={() => setShowAppButtons(true)}
+                  className="px-8 py-4 md:px-12 md:py-5 bg-gradient-orange-purple text-background font-bold text-base md:text-lg rounded-xl hover:scale-105 transition-all duration-300 shadow-xl shadow-primary/30 mb-6 md:mb-8"
+                >
+                  Join KringP Today
+                </button>
+              ) : (
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6 md:mb-8">
+                  <a href="https://apps.apple.com/in/app/kringp/id6747716001" target="_blank" rel="noopener noreferrer">
+                    <button className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-lg hover:bg-black/90 transition-all hover:scale-105 text-base font-semibold">
+                      <Apple className="w-5 h-5" />
+                      App Store
+                    </button>
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.app.kringp" target="_blank" rel="noopener noreferrer">
+                    <button className="flex items-center gap-2 px-6 py-3 bg-gradient-orange-purple text-white rounded-lg hover:scale-105 transition-all text-base font-semibold glow-combo-sm hover:glow-combo">
+                      <Smartphone className="w-5 h-5" />
+                      Play Store
+                    </button>
+                  </a>
+                </div>
+              )}
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 text-sm md:text-base text-muted-foreground">
                 <span className="flex items-center gap-2">
