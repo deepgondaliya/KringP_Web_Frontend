@@ -65,13 +65,6 @@ const testimonials = [
   }
 ];
 
-const stats = [
-  { value: "1,000+", label: "Active Creators", icon: Users },
-  { value: "500+", label: "Business Partners", icon: Building2 },
-  { value: "₹0.5Cr+", label: "Creator Earnings", icon: TrendingUp },
-  { value: "97%", label: "Satisfaction Rate", icon: Heart }
-];
-
 export default function Testimonials() {
   const [visibleCards, setVisibleCards] = useState<number[]>([]);
   const [showAppButtons, setShowAppButtons] = useState(false);
@@ -148,23 +141,6 @@ export default function Testimonials() {
                 className="w-full max-w-xs md:max-w-md lg:max-w-2xl object-contain"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="mt-0 md:-mt-8 py-6 md:py-8 border-y border-border bg-white/95 backdrop-blur-sm relative z-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-            {stats.map((stat, index) => (
-              <div key={stat.label} className="text-center">
-                <stat.icon className="w-6 h-6 md:w-8 md:h-8 text-primary mx-auto mb-2 md:mb-3" />
-                <div className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-foreground mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-xs md:text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -277,7 +253,7 @@ export default function Testimonials() {
               Join thousands of creators and businesses who are already thriving on KringP. 
               Your story could be next.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
               {!showAppButtons ? (
                 <button 
                   onClick={() => setShowAppButtons(true)}
@@ -286,7 +262,7 @@ export default function Testimonials() {
                   Start Your Journey
                 </button>
               ) : (
-                <>
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
                   <a href="https://apps.apple.com/in/app/kringp/id6747716001" target="_blank" rel="noopener noreferrer">
                     <button className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-lg hover:bg-black/90 transition-all hover:scale-105 text-base font-semibold">
                       <Apple className="w-5 h-5" />
@@ -299,7 +275,7 @@ export default function Testimonials() {
                       Play Store
                     </button>
                   </a>
-                </>
+                </div>
               )}
               <a href="/support/help-center">
                 <button className="px-6 py-3 md:px-8 md:py-4 bg-card border border-primary text-primary font-semibold text-sm md:text-base rounded-xl hover:bg-primary/10 transition-colors">

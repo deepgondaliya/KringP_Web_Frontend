@@ -41,7 +41,7 @@ const Footer = () => {
               <img src="/logo.png" alt="KringP Logo" className="w-18 h-12 rounded-xl" />
             </a>
             <p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
-              Where influence meets impact. Connecting local businesses with authentic creators across India.
+              Where influence meets impact. Connecting local businesses with authentic creators globally.
             </p>
             <div className="flex items-center gap-4">
               {socialLinks.map((social, index) => (
@@ -109,7 +109,7 @@ const Footer = () => {
           <div className="flex items-center gap-2 text-muted-foreground">
             <span>Ecosystem Support by:</span>
             <a href="https://innovationfactory.ca/" target="_blank" rel="noopener noreferrer">
-              <img src="/supportby_1.png" alt="Support Logo" className="h-8 hover:opacity-80 transition-opacity" />
+              <img src="/supportby_1.png" alt="Support Logo" className="h-12 hover:opacity-80 transition-opacity" />
             </a>
           </div>
         </div>

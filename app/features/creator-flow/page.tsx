@@ -104,13 +104,13 @@ export default function CreatorFlow() {
                 <span className="text-muted-foreground">Join 10,000+ creators already on KringP</span>
               </div>
               {!showAppButtons ? (
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Button size="lg" variant="purple" className="text-lg px-8" onClick={() => setShowAppButtons(true)}>
                     Start Your Journey
                   </Button>
                 </div>
               ) : (
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a href="https://apps.apple.com/in/app/kringp/id6747716001" target="_blank" rel="noopener noreferrer">
                     <button className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-lg hover:bg-black/90 transition-all hover:scale-105 text-base font-semibold">
                       <Apple className="w-5 h-5" />

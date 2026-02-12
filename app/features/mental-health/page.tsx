@@ -295,7 +295,7 @@ export default function MentalHealth() {
               </div>
               <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                 At KringP, your well-being matters. We’ve partnered with the
-                Vanderwala Foundation to bring their dedicated mental health
+                Vandervala Foundation to bring their dedicated mental health
                 support services directly to our platform—for free. Whether
                 you’re feeling stressed, anxious, or overwhelmed, you can call
                 or chat with trained counselors 24/7. Share your feelings,
@@ -378,7 +378,7 @@ export default function MentalHealth() {
                   Join KringP Today
                 </button>
               ) : (
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6 md:mb-8">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-6 md:mb-8">
                   <a href="https://apps.apple.com/in/app/kringp/id6747716001" target="_blank" rel="noopener noreferrer">
                     <button className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-lg hover:bg-black/90 transition-all hover:scale-105 text-base font-semibold">
                       <Apple className="w-5 h-5" />

@@ -154,13 +154,13 @@ export default function Journey() {
           <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join thousands of creators and businesses who are writing the next chapter with us.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             {!showAppButtons ? (
               <Button size="lg" className="gap-2 bg-gradient-to-r from-primary to-accent text-white hover:opacity-90" onClick={() => setShowAppButtons(true)}>
                 Start Your Journey <ArrowRight size={18} />
               </Button>
             ) : (
-              <>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href="https://apps.apple.com/in/app/kringp/id6747716001" target="_blank" rel="noopener noreferrer">
                   <button className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-lg hover:bg-black/90 transition-all hover:scale-105 text-base font-semibold">
                     <Apple className="w-5 h-5" />
@@ -173,7 +173,7 @@ export default function Journey() {
                     Play Store
                   </button>
                 </a>
-              </>
+              </div>
             )}
             <a href="/support/help-center">
               <Button size="lg" variant="outline" className="border-primary hover:bg-primary/10">
