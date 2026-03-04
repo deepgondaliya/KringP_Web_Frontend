@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter, Space_Grotesk } from 'next/font/google'
+import ChatBot from '@/components/ChatBot'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -14,6 +15,9 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata = {
   title: 'KringP - Where Influence Meets Impact | India\'s #1 Influencer Marketing Platform',
   description: 'KringP connects local businesses with authentic creators across India. Find the perfect influencer for your brand or showcase your talent as a creator. Join the movement today.',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({
@@ -25,6 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-body`}>
         {children}
+        <ChatBot />
       </body>
     </html>
   )

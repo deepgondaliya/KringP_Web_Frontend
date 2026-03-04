@@ -3,7 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { ArrowLeft, HelpCircle, Search, MessageCircle, Mail, Phone, ChevronRight, BookOpen, Users, CreditCard, Settings, Shield, Zap } from "lucide-react";
+import { ArrowLeft, HelpCircle, Search, MessageCircle, Mail, ChevronRight, BookOpen, Users, CreditCard, Settings, Shield, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
@@ -234,7 +234,7 @@ export default function HelpCenter() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           <div className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary/30 transition-colors">
             <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
               <MessageCircle className="w-7 h-7 text-primary" />
@@ -243,23 +243,16 @@ export default function HelpCenter() {
             <p className="text-sm text-muted-foreground mb-4">Chat with our team in real-time</p>
             <Button variant="outline" size="sm">Start Chat</Button>
           </div>
-          
+
           <div className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary/30 transition-colors">
             <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
               <Mail className="w-7 h-7 text-primary" />
             </div>
             <h3 className="text-lg font-display font-bold text-foreground mb-2">Email Support</h3>
             <p className="text-sm text-muted-foreground mb-4">Get help within 24 hours</p>
-            <Button variant="outline" size="sm">Send Email</Button>
-          </div>
-          
-          <div className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary/30 transition-colors">
-            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <Phone className="w-7 h-7 text-primary" />
-            </div>
-            <h3 className="text-lg font-display font-bold text-foreground mb-2">Phone Support</h3>
-            <p className="text-sm text-muted-foreground mb-4">Mon-Fri, 9am-6pm EST</p>
-            <Button variant="outline" size="sm">Call Now</Button>
+            <a href="mailto:hello@kringp.com">
+              <Button variant="outline" size="sm">Send Email</Button>
+            </a>
           </div>
         </div>
       </div>
