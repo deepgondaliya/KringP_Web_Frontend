@@ -106,6 +106,13 @@ export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState("");
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
+  const handleLiveChatClick = () => {
+    const chatButton = document.querySelector('[aria-label="Open chat"]') as HTMLButtonElement;
+    if (chatButton) {
+      chatButton.click();
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -241,7 +248,7 @@ export default function HelpCenter() {
             </div>
             <h3 className="text-lg font-display font-bold text-foreground mb-2">Live Chat</h3>
             <p className="text-sm text-muted-foreground mb-4">Chat with our team in real-time</p>
-            <Button variant="outline" size="sm">Start Chat</Button>
+            <Button variant="outline" size="sm" onClick={handleLiveChatClick}>Start Chat</Button>
           </div>
 
           <div className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary/30 transition-colors">
